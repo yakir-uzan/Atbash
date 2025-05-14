@@ -14,12 +14,19 @@ namespace Atbash
             foreach (string word in s)
             {
                 if (wordlist.Contains(word))
+                {
                     if (problematicwords.ContainsKey(word))
                     {
-                        problematicwords[word] = 1;
+                        problematicwords[word] ++;
                     }
-                    else problematicwords[word]++;
+                    else problematicwords[word] = 1;
+                }
+                else problematicwords[word] = 0;
+                
+                
             }
+                print(problematicwords);
+            
 
             return problematicwords;
         }
@@ -32,6 +39,9 @@ namespace Atbash
         }
         static void Main(string[] args)
         {
+            string[] words = { "chamas", "til", "ptzatzza", "muchamd", "chamas", "til", "chamas", "ptzatzza", "chamas" };
+         string[] problems = { "chamas", "ptzatzza" };
+            CounterString(words, problems);
             //Dictionary<string,int>dd = new Dictionary<string,int>();
             //dd["chamas"] = 1;
             //dd["pzzatzza"] = 5;
