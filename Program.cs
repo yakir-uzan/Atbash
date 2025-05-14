@@ -22,13 +22,9 @@ namespace Atbash
                     else problematicwords[word] = 1;
                 }
                 else problematicwords[word] = 0;
-                
-                
             }
                 print(problematicwords);
-            
-
-            return problematicwords;
+                        return problematicwords;
         }
         static void print(Dictionary<string, int> d)
         {
