@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Atbash
 {
     internal class Program
     {
-        static string newstring(string s)
+        static string[] decryptedText(string txt)
         {
-            s = s.Trim();
-            return s;
+            string[] strArr = txt.Split(' ');
+            return strArr;
         }
+
         static void Main(string[] args)
         {
+            
         }
     }
 }
