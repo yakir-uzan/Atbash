@@ -9,15 +9,20 @@ namespace Atbash
 {
     internal class Program
     {
-        static string[] decryptedText(string txt)
+        static string DecryptedText(string txt)
         {
-            string[] strArr = txt.Split(' ');
-            return strArr;
+            string txtLower = txt.ToLower();
+            string result = " ";
+
+            foreach (char c in txtLower)
+                result += (char)('z' - (c - 'a'));
+            return result;
         }
+    
 
         static void Main(string[] args)
         {
-            
+            Console.WriteLine(DecryptedText("abcd bvcx"));
         }
     }
 }
