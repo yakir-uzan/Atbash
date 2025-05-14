@@ -8,6 +8,11 @@ namespace Atbash
 {
     internal class Program
     {
+        static string newstring(string s)
+        {
+            s = s.Trim();
+            return s;
+        }
         static void Main(string[] args)
         {
         }
