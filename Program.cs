@@ -8,15 +8,18 @@ namespace Atbash
 {
     internal class Program
     {
-        static (string[],int) CounterString(string[] s, string[] wordlist)
+        static (string,int) CounterString(string[] s, string[] wordlist)
         {
+            string text = string.Empty;
             int counter = 0;
             foreach (string word in s)
             {
                 if (wordlist.Contains(word)) 
                     counter++;
             }
-                                   return (s,counter); 
+            text = string.Join(" ",s);
+
+                                   return (text,counter); 
         }
               static void Finitefunctsoin(string[] arrya,int num)
                     {
@@ -27,8 +30,9 @@ namespace Atbash
         {
             string[] words = { "chamas", "til", "ptzatzza", "muchamd", "chamas", "til", "chamas", "ptzatzza", "chamas" };
          string[] problems = { "chamas", "ptzatzza" };
-            var (arr,num) = CounterString(words, problems);
-            Finitefunctsoin(arr, num);
+            //var (arr, num) = 
+                Console.WriteLine(CounterString(words, problems));
+            //Finitefunctsoin(arr, num);
         }
     }
 }
